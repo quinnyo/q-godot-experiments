@@ -1,0 +1,75 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="Script" path="res://experiment/gonagon_sdf_instance_2d.gd" id="1_ari03"]
+[ext_resource type="Shader" path="res://experiment/sdf_gonagon.gdshader" id="1_mb2x4"]
+[ext_resource type="Texture2D" uid="uid://blla2h2oc17vw" path="res://icon.svg" id="1_t763e"]
+[ext_resource type="Script" path="res://addons/qnvr_poly_chunk/src/gnode/gon.gd" id="2_rtnhy"]
+-86, -269, 18, -193, 96, -376, 161, -311, 323, -128, 249, -90, 161, -135, 172, -72, 104, -3, 171, -52, 161, -35.8259, 194.625, -14, 240, 85, 323, 291, 257, 293, 59, 389, 115, 324, -178, 96, -222, 103, -110, -43.8286, -80.2236, -183, -52, -205, -122, -269, -86, -269, -86, -269, -86, -269, -86, -269, -86, -269, -86, -269, -86, -269, -86, -269, -86)
+
+[sub_resource type="Resource" id="Resource_gn4pk"]
+script = ExtResource("2_rtnhy")
+v_position = PackedVector2Array(-269, -86, -269, 18, -193, 96, -376, 161, -311, 323, -128, 249, -90, 161, -135, 172, -72, 104, -3, 171, -52, 161, -35.8259, 194.625, -14, 240, 85, 323, 291, 257, 293, 59, 389, 115, 324, -178, 96, -222, 103, -110, -43.8286, -80.2236, -183, -52, -205, -122)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ust28"]
+shader = ExtResource("1_mb2x4")
+shader_parameter/border_color = Color(0.454902, 0.862745, 0.917647, 1)
+shader_parameter/border_ratio = 0.0
+shader_parameter/border_thickness = 2.0
+shader_parameter/core_color = Color(0.0196078, 0.117647, 0.172549, 1)
+shader_parameter/core_fade_dist = 60.0
+shader_parameter/core_fade_power = 1.1
+shader_parameter/core_start_depth = 15.0
+shader_parameter/line_spacing = 8.0
+shader_parameter/line_thickness = 1.1
+shader_parameter/polygon = PackedVector2Array(-170, -81, -156, 107, -191, 199, -131, 188, -65, 239, -46, 168, -7, 133, -73, 90, -170, -81, -170, -81, -170, -81, -170, -81, -170, -81, -170, -81, -170, -81, -170, -81, -170, -81, -170, -81, -170, -81, -170, -81, -170, -81, -170, -81, -170, -81, -170, -81, -170, -81, -170, -81, -170, -81, -170, -81, -170, -81, -170, -81, -170, -81, -170, -81)
+
+[sub_resource type="Resource" id="Resource_xouqq"]
+script = ExtResource("2_rtnhy")
+v_position = PackedVector2Array(-170, -81, -156, 107, -191, 199, -131, 188, -65, 239, -46, 168, -7, 133, -73, 90)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s21be"]
+shader = ExtResource("1_mb2x4")
+shader_parameter/border_color = Color(0.988235, 0.356863, 0.686275, 1)
+shader_parameter/border_ratio = 1.0
+shader_parameter/border_thickness = 2.0
+shader_parameter/core_color = Color(0.219608, 0.00392157, 0.0980392, 1)
+shader_parameter/core_fade_dist = 45.0
+shader_parameter/core_fade_power = 1.0
+shader_parameter/core_start_depth = 0.0
+shader_parameter/line_spacing = 3.0
+shader_parameter/line_thickness = 0.4
+shader_parameter/polygon = PackedVector2Array(-4, -32, -56, 50, -101, 69, -143, 113, -168, 125, -173, 185, -128, 163, -119, 127, -88, 105, -52, 95, 19, 170, 89, 132, 99, 102, 22, 62, 87, 6, 65, -21, -4, -32, -4, -32, -4, -32, -4, -32, -4, -32, -4, -32, -4, -32, -4, -32, -4, -32, -4, -32, -4, -32, -4, -32, -4, -32, -4, -32, -4, -32, -4, -32)
+
+[sub_resource type="Resource" id="Resource_7bsc2"]
+script = ExtResource("2_rtnhy")
+v_position = PackedVector2Array(-4, -32, -56, 50, -101, 69, -143, 113, -168, 125, -173, 185, -128, 163, -119, 127, -88, 105, -52, 95, 19, 170, 89, 132, 99, 102, 22, 62, 87, 6, 65, -21)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(336, 255)
+scale = Vector2(5.69531, 5.69531)
+texture = ExtResource("1_t763e")
+
+[node name="gonagon_instance_2d4" type="Node2D" parent="."]
+material = SubResource("ShaderMaterial_0hfx7")
+script = ExtResource("1_ari03")
+gon = SubResource("Resource_qk885")
+
+[node name="gonagon_instance_2d" type="Node2D" parent="."]
+material = SubResource("ShaderMaterial_4fav8")
+position = Vector2(906, 743)
+script = ExtResource("1_ari03")
+gon = SubResource("Resource_gn4pk")
+
+[node name="gonagon_instance_2d2" type="Node2D" parent="."]
+material = SubResource("ShaderMaterial_ust28")
+position = Vector2(1120, 220)
+script = ExtResource("1_ari03")
+gon = SubResource("Resource_xouqq")
+
+[node name="gonagon_instance_2d3" type="Node2D" parent="."]
+material = SubResource("ShaderMaterial_s21be")
+position = Vector2(282, 702)
+script = ExtResource("1_ari03")
+gon = SubResource("Resource_7bsc2")

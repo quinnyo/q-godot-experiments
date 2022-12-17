@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://ccja3q038t3u5"
+path="res://.godot/imported/handle_mask.png-eb62b8f760e603f5a5e0af1096d95f39.res"
+
+[deps]
+
+source_file="res://addons/izmo/gizmo/handle_mask.png"
+dest_files=["res://.godot/imported/handle_mask.png-eb62b8f760e603f5a5e0af1096d95f39.res"]
+
+[params]
+
+create_from=1
+threshold=0.5

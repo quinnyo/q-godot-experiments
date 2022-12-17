@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://cr7wiwtt26bln"]
+
+[ext_resource type="Script" path="res://addons/izmo/gizmo/handle.gd" id="1_cp6pi"]
+[ext_resource type="Texture2D" uid="uid://by1yit5odlwyh" path="res://addons/izmo/gizmo/handle_default.png" id="1_e6sh1"]
+[ext_resource type="Texture2D" uid="uid://bkpvahxo2wamb" path="res://addons/izmo/gizmo/handle_press.png" id="2_ibogj"]
+[ext_resource type="Texture2D" uid="uid://d2extx3pyihdf" path="res://addons/izmo/gizmo/handle_hover.png" id="3_peq27"]
+[ext_resource type="BitMap" uid="uid://ccja3q038t3u5" path="res://addons/izmo/gizmo/handle_mask.png" id="4_ym2bh"]
+
+[node name="Handle" type="Node2D"]
+script = ExtResource("1_cp6pi")
+
+[node name="Button" type="TextureButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+keep_pressed_outside = true
+texture_normal = ExtResource("1_e6sh1")
+texture_pressed = ExtResource("2_ibogj")
+texture_hover = ExtResource("3_peq27")
+texture_click_mask = ExtResource("4_ym2bh")
+stretch_mode = 5
+
+[connection signal="button_down" from="Button" to="." method="_on_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_up"]
