@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ct2nqulgblwvb"]
+
+[ext_resource type="Script" path="res://experiment/export_array_elements.gd" id="1_ud2lb"]
+[ext_resource type="Texture2D" uid="uid://blla2h2oc17vw" path="res://icon.svg" id="2_wlm5h"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_3hjeq"]
+
+[node name="Node" type="Node"]
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("1_ud2lb")
+things/size = 2
+things/thing0/number = 7603
+things/thing0/texture = ExtResource("2_wlm5h")
+things/thing1/number = 3860
+things/thing1/texture = SubResource("PlaceholderTexture2D_3hjeq")
